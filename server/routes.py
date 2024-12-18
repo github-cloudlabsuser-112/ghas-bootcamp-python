@@ -12,7 +12,7 @@ logging.basicConfig(filename="logs.log", filemode="w", level=logging.DEBUG)
 @flaskapp.route("/")
 def index():
     name = request.args.get("name")
-    author = request.args.get("author")
+    author = request.args.get("author") 
 
     if name:
         cursor.execute("SELECT * FROM books WHERE name LIKE '%" + name + "%'")
